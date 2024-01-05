@@ -1,7 +1,6 @@
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 import re
-from background import keep_alive
 import time
 
 data = []
@@ -51,7 +50,6 @@ def private_message_founded():
     send_message(seller_id, "Написал в ЛС по поводу микронаушника", msg=event.message_id)
 
 
-keep_alive()
 
 for event in longpoll.listen():
     time.sleep(1)
